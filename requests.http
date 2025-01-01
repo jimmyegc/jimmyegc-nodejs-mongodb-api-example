@@ -1,0 +1,28 @@
+### Create Mascota
+POST http://localhost:5000/mascotas
+Content-Type: application/json
+
+{
+    "nombre": "Firulais",
+    "edad": 5,
+    "raza": "Pastor Aleman",
+    "sexo": "Macho"
+}
+
+### Get Mascotas
+GET http://localhost:5000/mascotas
+
+
+### Create Mascota
+PUT http://localhost:5000/mascotas/677479e444ad5aee37f35cce
+Content-Type: application/json
+
+{
+    "nombre": "Firulais UPDATED",
+    "edad": 15,
+    "raza": "Pastor Aleman TEST",
+    "sexo": "Macho TEST"
+}
+
+### Delete Mascota
+DELETE http://localhost:5000/mascotas/677479e444ad5aee37f35cce
