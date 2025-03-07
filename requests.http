@@ -5,7 +5,7 @@ Content-Type: application/json
 {
     "nombre": "Dante",
     "edad": 1,
-    "tipo": "Perro",
+    "tipo": "Pez",
     "raza": "Pitbull",
     "sexo": "Macho"
 }
@@ -15,8 +15,9 @@ GET http://localhost:5000/mascotas
 
 
 ### Create Mascota
-PUT http://localhost:5000/mascotas/67c7c113c0c378ca32d04e60
+PUT http://localhost:5000/mascotas/67ca3699c9f223217fd36348
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImppbWJvcm9zc29AZ21haWwuY29tIiwiaWF0IjoxNzQxMzE0NjIwLCJleHAiOjE3NDEzMTgyMjB9.8Vaz8VMbWhkVjAGDHVqIncl6KB_pRYdDR5_FwWR2sxQ
 
 {
     "nombre": "Dantesito",
@@ -27,4 +28,26 @@ Content-Type: application/json
 }
 
 ### Delete Mascota
-DELETE http://localhost:5000/mascotas/67c7c113c0c378ca32d04e60
+DELETE http://localhost:5000/mascotas/67ca3690c9f223217fd36344
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImppbWJvcm9zc29AZ21haWwuY29tIiwiaWF0IjoxNzQxMzA1NDM5LCJleHAiOjE3NDEzMDkwMzl9.vv1xvlYhyn5ZiDQ_HKfoe7OL7q8TR4LpMhrPP-4g-P4
+
+
+### Register a new user
+POST http://localhost:5000/users/register
+Content-Type: application/json
+
+{
+    "nombre": "Jimbo",
+    "email": "jimborosso@gmail.com",
+    "clave": "123456"
+}
+
+### Login
+POST http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+    "email": "jimborosso@gmail.com",
+    "password": "123456"
+}

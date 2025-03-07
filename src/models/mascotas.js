@@ -1,6 +1,6 @@
 import Mascota from '../schemas/mascotas.js';
 
-class mascostasModel {
+class MascostasModel {
   
   async getAll() {
     return await Mascota.find();
@@ -24,4 +24,4 @@ class mascostasModel {
 
 }
 
-export default new mascostasModel();
+export default new MascostasModel()

@@ -1,7 +1,7 @@
 import 'dotenv/config'
 import mongoose from 'mongoose'
 
-class dbClient {
+class DbClient {
 
   constructor() { 
     this.conectarBaseDatos();
@@ -23,4 +23,4 @@ class dbClient {
 
 }
 
-export default new dbClient();
+export default new DbClient();
