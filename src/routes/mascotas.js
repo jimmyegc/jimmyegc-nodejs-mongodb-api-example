@@ -1,12 +1,12 @@
 import express from "express"
-import mascotaController from '../controllers/mascotaController.js'
+import mascotasController from '../controllers/mascotas.js'
 import { verificarToken} from '../helpers/autenticacion.js'
 const route = express.Router()
 
-route.post("/", mascotaController.create)
-route.get("/:id", mascotaController.getOne)
-route.get("/", mascotaController.getAll)
-route.put("/:id", verificarToken, mascotaController.update)
-route.delete("/:id", verificarToken, mascotaController.delete)
+route.post("/", mascotasController.create)
+route.get("/:id", mascotasController.getOne)
+route.get("/", mascotasController.getAll)
+route.put("/:id", verificarToken, mascotasController.update)
+route.delete("/:id", verificarToken, mascotasController.delete)
 
 export default route
