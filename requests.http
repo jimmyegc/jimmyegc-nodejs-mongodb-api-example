@@ -5,7 +5,7 @@ Content-Type: application/json
 {
     "nombre": "Dante",
     "edad": 1,
-    "tipo": "Pez",
+    "tipo": "Perro",
     "raza": "Pitbull",
     "sexo": "Macho"
 }
@@ -15,9 +15,9 @@ GET http://localhost:5000/mascotas
 
 
 ### Create Mascota
-PUT http://localhost:5000/mascotas/67ca3699c9f223217fd36348
+PUT http://localhost:5000/mascotas/67d3622f2cbee1c08a1c3f72
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImppbWJvcm9zc29AZ21haWwuY29tIiwiaWF0IjoxNzQxMzE0NjIwLCJleHAiOjE3NDEzMTgyMjB9.8Vaz8VMbWhkVjAGDHVqIncl6KB_pRYdDR5_FwWR2sxQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImppbWJvcm9zc29AZ21haWwuY29tIiwiaWF0IjoxNzQxOTA2NDk3LCJleHAiOjE3NDE5MTAwOTd9.5_ybGm9SSNdDSxY5j0HpJD8vxr_3dbnCH65deQ-Vcac
 
 {
     "nombre": "Dantesito",
