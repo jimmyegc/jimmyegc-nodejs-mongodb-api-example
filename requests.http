@@ -15,9 +15,9 @@ GET http://localhost:5000/mascotas
 
 
 ### Create Mascota
-PUT http://localhost:5000/mascotas/67d3622f2cbee1c08a1c3f72
+PUT http://localhost:5000/mascotas/67ca3699c9f223217fd36348
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImppbWJvcm9zc29AZ21haWwuY29tIiwiaWF0IjoxNzQxOTA2NDk3LCJleHAiOjE3NDE5MTAwOTd9.5_ybGm9SSNdDSxY5j0HpJD8vxr_3dbnCH65deQ-Vcac
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImppbWJvcm9zc29AZ21haWwuY29tIiwiaWF0IjoxNzQxOTEyMzI0LCJleHAiOjE3NDE5MTU5MjR9.fMXrWrlIIPT3TvdpeCstmwL40Uv_52JHaCDB2IZJZ5E
 
 {
     "nombre": "Dantesito",
