@@ -28,9 +28,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImppbWJvc
 }
 
 ### Delete Mascota
-DELETE http://localhost:5000/mascotas/67ca3690c9f223217fd36344
+DELETE http://localhost:5000/mascotas/67df88afd82347c7aa13789a
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImppbWJvcm9zc29AZ21haWwuY29tIiwiaWF0IjoxNzQxMzA1NDM5LCJleHAiOjE3NDEzMDkwMzl9.vv1xvlYhyn5ZiDQ_HKfoe7OL7q8TR4LpMhrPP-4g-P4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImppbWJvcm9zc29AZ21haWwuY29tIiwiaWF0IjoxNzQyNzAzOTc2LCJleHAiOjE3NDI3MDc1NzZ9.oyTFCCVoJQL8a_wBu30SUjWn2q5gRQI7ZRr8am62c6I
 
 
 ### Register a new user
@@ -50,4 +50,18 @@ Content-Type: application/json
 {
     "email": "jimborosso@gmail.com",
     "password": "123456"
+}
+
+### Get Profile
+GET http://localhost:5000/users/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImppbWJvcm9zc29AZ21haWwuY29tIiwiaWF0IjoxNzQyNzUxODM5LCJleHAiOjE3NDI3NTU0Mzl9.D6LjX0fXLpj34GjVebAqoX__QQNLUTZUdiVKJvKA_yE
+
+
+### Adoptar
+POST http://localhost:5000/mascotas/67df8f51bcbe7842e77a35ed/adoptar
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImppbWJvcm9zc29AZ21haWwuY29tIiwiaWF0IjoxNzQyNzAzOTc2LCJleHAiOjE3NDI3MDc1NzZ9.oyTFCCVoJQL8a_wBu30SUjWn2q5gRQI7ZRr8am62c6I
+
+{
+    "usuarioId": "67ca2cbe7aa8650f39d7fc82"
 }

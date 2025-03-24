@@ -47,7 +47,20 @@ class MascotasController  {
       res.status(201).json(data);
     } catch (error) {
       res.status(500).json({ status: "error", message: 'Error al crear mascota' });
-    }
+    }    
+  }
+
+  async adoptar(req, res) {
+    try {
+      const { mascotaId } = req.params      
+      const { usuarioId } = req.body      
+      if(!usuarioId) {
+        return res.status(400).json({ status: "error", message: 'Se require el Id del usuario adoptante' });
+      }
+      const data = await mascotasModel.adoptar(mascotaId, usuarioId)
+      res.status(201).json(data);
+    } catch (error) {
+      res.status(500).json({ status: "error", message: error.message })};
   }
 
 }

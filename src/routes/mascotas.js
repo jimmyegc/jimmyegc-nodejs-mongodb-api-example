@@ -8,5 +8,6 @@ route.get("/:id", mascotasController.getOne)
 route.get("/", mascotasController.getAll)
 route.put("/:id", verificarToken, mascotasController.update)
 route.delete("/:id", verificarToken, mascotasController.delete)
+route.post("/:mascotaId/adoptar", verificarToken, mascotasController.adoptar)
 
 export default route

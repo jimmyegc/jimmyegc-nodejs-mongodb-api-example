@@ -20,6 +20,10 @@ const mascotaSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },  
+  adoptadoPor: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'usuarios'
+  }
 }, { timestamps: true });
 
 export default mongoose.model('mascotas', mascotaSchema);
