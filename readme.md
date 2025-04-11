@@ -14,3 +14,16 @@ https://www.youtube.com/watch?v=DIwpTJ4oXvw
 
 ### Aprende a Documentar tu API Node.js con Swagger Autogen y Swagger UI Express 🚀
 https://www.youtube.com/watch?v=3EMLqQ6ny80
+
+### ¡Dockeriza tu Aplicación como un PRO! 🐳 Aprende Dockerfile, .dockerignore y Más 🚀
+https://www.youtube.com/watch?v=tpai8uzkROA&t=340s
+
+- docker build -t api-adopcion .
+
+- docker images 
+
+- docker run -p 4000:5000 --env-file .env api-adopcion
+
+- docker ps -a
+
+- docker rm
