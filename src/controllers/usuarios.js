@@ -14,8 +14,7 @@ class UsuariosController {
       const claveEncriptada = await bcrypt.hash(clave, 10);
       const data = await usuariosModel.create({ email, nombre, telefono, clave: claveEncriptada })
       res.status(201).json({ status: "ok", message: 'Usuario creado', data });
-    } catch (e) {
-      console.log(e);
+    } catch (e) {      
       res.status(500).send(e);
     }
 
@@ -38,7 +37,29 @@ class UsuariosController {
     } catch (e) {
       res.status(500).send(e);
     }
+  }
 
+  async profile(req, res) {
+    try {            
+      const usuario = await usuariosModel.getOne({ email: req.emailConectado })
+      res.status(200).json({ status: "ok", message: 'Usuario logueado', usuario });
+    } catch (e) {
+      res.status(500).send (e);
+    }
+  }
+
+  async misMascotas(req, res) {
+    try {
+      const { id } = req.params
+      const usuarioExiste = await usuariosModel.getOneById(id); 
+      if(!usuarioExiste) {
+        return res.status(400).json({ status: "error", message: 'Usuario no existe' }); 
+      }
+      const data = await usuariosModel.getMisMascotas(id);
+      res.status(200).json({ status: "ok", message: 'Mascotas adoptadas por el usuario', data });
+    } catch (e) {
+      res.status(500).send(e);
+    }
   }
 
 }

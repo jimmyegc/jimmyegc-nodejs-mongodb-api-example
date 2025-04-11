@@ -1,4 +1,5 @@
 import Mascota from '../schemas/mascotas.js';
+import Usuario from '../schemas/usuarios.js';
 
 class MascostasModel {
   
@@ -20,6 +21,21 @@ class MascostasModel {
 
   async deleteById(id) {    
     return await Mascota.findOneAndDelete({ _id: id });
+  }
+
+  async adoptar(mascotaId, usuarioId) {
+    const mascota = await Mascota.findById(mascotaId);  
+    if (!mascota) throw new Error('Mascota a adoptar no encontrada');
+    if (mascota.adoptado) throw new Error('Mascota adoptada anteriormente');
+
+    const usuario = await Usuario.findById(usuarioId);    
+    if (!usuario) throw new Error('Usuario adoptante no encontrado');        
+
+    const mascotaAdoptada = await Mascota.findOneAndUpdate(
+      { _id: mascotaId }, 
+      { adoptado: true, adoptadoPor: usuarioId }      
+    )        
+    return mascotaAdoptada;
   }
 
 }

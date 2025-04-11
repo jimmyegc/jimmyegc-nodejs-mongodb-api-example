@@ -15,6 +15,7 @@ https://www.youtube.com/watch?v=DIwpTJ4oXvw
 ### Aprende a Documentar tu API Node.js con Swagger Autogen y Swagger UI Express 🚀
 https://www.youtube.com/watch?v=3EMLqQ6ny80
 
+<<<<<<< HEAD
 ### ¡Dockeriza tu Aplicación como un PRO! 🐳 Aprende Dockerfile, .dockerignore y Más 🚀
 https://www.youtube.com/watch?v=tpai8uzkROA&t=340s
 
@@ -27,3 +28,7 @@ https://www.youtube.com/watch?v=tpai8uzkROA&t=340s
 - docker ps -a
 
 - docker rm
+=======
+### API - MongoDB + Mongoose: Implementando Adopción de Mascotas con Referencias entre Documentos
+https://www.youtube.com/watch?v=T6x8uRcF8SY
+>>>>>>> d4bf37370cf5d42230770041f288ef598956e1c8

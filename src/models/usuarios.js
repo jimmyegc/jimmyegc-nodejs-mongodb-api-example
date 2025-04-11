@@ -1,4 +1,5 @@
 import Usuario from '../schemas/usuarios.js';
+import Mascota from '../schemas/mascotas.js';
 
 class UsuariosModel {
   
@@ -24,6 +25,12 @@ class UsuariosModel {
 
   async deleteById(id) {    
     return await Usuario.findOneAndDelete({ _id: id });
+  }
+
+  async getMisMascotas(id) {
+    const filter = { adoptadoPor: id };
+    const mascotas = await Mascota.find(filter);
+    return mascotas;
   }
 
 }
